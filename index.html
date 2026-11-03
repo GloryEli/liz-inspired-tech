@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liz Inspired Technologies | Enterprise AI & Software Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#020617',
+            brandNav: '#0f172a',
+            brandAccent: '#06b6d4',
+            brandAccentHover: '#0891b2',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-brandAccent selection:text-slate-950">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 bg-brandNav/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="text-xl font-bold tracking-tight text-white hover:text-brandAccent transition flex items-center gap-2">
+        <i class="fa-solid fa-brain text-brandAccent"></i> Liz Inspired Tech
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-brandAccent transition">Services</a>
+        <a href="#case-studies" class="hover:text-brandAccent transition">Case Studies</a>
+        <a href="#about" class="hover:text-brandAccent transition">About Us</a>
+      </nav>
+
+      <!-- Contact CTA -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="mailto:gloryelizabethakoto@gmail.com" class="inline-flex items-center gap-2 bg-brandAccent hover:bg-brandAccentHover text-slate-950 font-semibold px-4 py-2 rounded-lg text-xs transition shadow-md shadow-cyan-500/10">
+          <i class="fa-solid fa-paper-plane"></i> Get in Touch
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="md:hidden text-slate-300 hover:text-white text-xl focus:outline-none">
+        <i class="fa-solid fa-bars" id="menuIcon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-6 space-y-4">
+      <a href="#services" class="mobile-link block text-slate-300 hover:text-brandAccent font-medium text-sm">Services</a>
+      <a href="#case-studies" class="mobile-link block text-slate-300 hover:text-brandAccent font-medium text-sm">Case Studies</a>
+      <a href="#about" class="mobile-link block text-slate-300 hover:text-brandAccent font-medium text-sm">About Us</a>
+      <div class="pt-4 border-t border-slate-800">
+        <a href="mailto:gloryelizabethakoto@gmail.com" class="inline-flex w-full items-center justify-center gap-2 bg-brandAccent hover:bg-brandAccentHover text-slate-950 font-semibold px-4 py-2 rounded-lg text-xs transition">
+          <i class="fa-solid fa-paper-plane"></i> Get in Touch
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="relative py-24 md:py-32 overflow-hidden border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-brandAccent text-xs font-semibold mb-6">
+          <i class="fa-solid fa-microchip"></i> Next-Gen AI Consultancy & Engineering
+        </span>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+          Architecting Smart <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-200">AI Systems</span> For Real-World Business
+        </h1>
+        <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+          At Liz Inspired Technologies, we design and deploy scalable custom machine learning pipelines, production backend APIs, and intelligent data systems built for precision and performance.
+        </p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#services" class="bg-brandAccent hover:bg-brandAccentHover text-slate-950 font-bold px-6 py-3 rounded-lg text-sm transition shadow-lg shadow-cyan-500/20">
+            Explore Our Solutions
+          </a>
+          <a href="#case-studies" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-6 py-3 rounded-lg text-sm transition border border-slate-700">
+            View Live Architectures
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card -->
+      <div class="relative">
+        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl blur-xl opacity-20"></div>
+        <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+            </div>
+            <span class="text-xs font-mono text-slate-400">liz_core_pipeline.py</span>
+          </div>
+          <pre class="font-mono text-xs text-slate-300 overflow-x-auto leading-relaxed"><code><span class="text-cyan-400">from</span> fastapi <span class="text-cyan-400">import</span> FastAPI
+<span class="text-cyan-400">from</span> LizCore <span class="text-cyan-400">import</span> ModelInferenceEngine
+
+app = FastAPI(title=<span class="text-teal-300">"Liz Inspired API"</span>)
+engine = ModelInferenceEngine(weights=<span class="text-teal-300">"prod_v2.pt"</span>)
+
+<span class="text-cyan-400">@app.post</span>(<span class="text-teal-300">"/v1/predict"</span>)
+<span class="text-cyan-400">async def</span> <span class="text-blue-400">run_inference</span>(payload: dict):
+    prediction = <span class="text-cyan-400">await</span> engine.process(payload)
+    <span class="text-cyan-400">return</span> {"status": 200, "result": prediction}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES SECTION ================= -->
+  <section id="services" class="py-20 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-white mb-4">Core Engineering Capability</h2>
+        <p class="text-slate-400">End-to-end technical execution—from data preprocessing and model development to robust API deployment.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl hover:border-cyan-500/50 transition">
+          <div class="w-12 h-12 rounded-lg bg-cyan-950 border border-cyan-800/50 flex items-center justify-center text-brandAccent text-xl mb-6">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Custom AI & Machine Learning</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Tailored predictive models, classification algorithms, and NLP tools trained on specific business data needs.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl hover:border-cyan-500/50 transition">
+          <div class="w-12 h-12 rounded-lg bg-cyan-950 border border-cyan-800/50 flex items-center justify-center text-brandAccent text-xl mb-6">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Backend API Architecture</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">High-throughput FastAPI & Python backend services built for real-time model inference and secure integration.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl hover:border-cyan-500/50 transition">
+          <div class="w-12 h-12 rounded-lg bg-cyan-950 border border-cyan-800/50 flex items-center justify-center text-brandAccent text-xl mb-6">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Data Analytics & Systems</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Transforming complex enterprise metrics into clean visual dashboards, data pipelines, and actionable insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CASE STUDY SECTION ================= -->
+  <section id="case-studies" class="py-20 border-b border-slate-800/80 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-gradient-to-br from-slate-900 to-cyan-950/40 border border-slate-800 rounded-2xl p-8 md:p-12">
+        <div class="max-w-3xl">
+          <span class="text-xs font-mono text-brandAccent uppercase tracking-widest font-semibold mb-3 block">Featured Platform Architecture</span>
+          <h2 class="text-3xl font-bold text-white mb-4">Academic Bloom Live Operations</h2>
+          <p class="text-slate-300 leading-relaxed mb-6">
+            A production Django platform engineered by Liz Inspired Technologies, hosting full-stack data handling workflows and deployed live on cloud infrastructure.
+          </p>
+          <div class="flex items-center gap-4">
+            <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400 bg-emerald-950/80 border border-emerald-800/50 px-3 py-1 rounded-full font-medium">
+              <i class="fa-solid fa-circle text-[8px] animate-pulse"></i> Live in Production
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-12 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6 text-center md:flex md:items-center md:justify-between text-xs text-slate-500">
+      <p>&copy; 2026 Liz Inspired Technologies. All rights reserved.</p>
+      <p class="mt-4 md:mt-0">Engineered by Glory Elizabeth Akoto</p>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.className = mobileMenu.classList.contains('hidden') ? 'fa-solid fa-bars' : 'fa-solid fa-xmark';
+      });
+
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.className = 'fa-solid fa-bars';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
